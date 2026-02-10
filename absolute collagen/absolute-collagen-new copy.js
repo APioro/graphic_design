@@ -1,4 +1,3 @@
-
 const projects = [
     {
         type: "media",
@@ -11,20 +10,16 @@ const projects = [
         size: "half",
     },
 
-
-
     {
         type: "text",
-        subtitle: "Identifying core problems",
-        description: "I given full freedom to decide the project’s focus, so I began by evaluating the existing webshop using heuristic analysis and quick user feedback sessions. The most critical issues emerged around navigation and product discovery, clarity of product information and purchase model, and overall brand coherence. These became the main areas I prioritized for redesign.",
+        subtitle: "Identyfikacja kluczowych problemów",
+        description: "Miałam pełną swobodę w określeniu, na czym skupić projekt, więc zaczęłam od oceny istniejącego sklepu internetowego, korzystając z analizy heurystycznej i szybkich sesji z użytkownikami. Najważniejsze problemy dotyczyły nawigacji i odkrywania produktów, przejrzystości informacji o produktach i modelu zakupu oraz spójności marki. Stały się one głównymi obszarami, które priorytetowo potraktowałam w redesignie.",
     },
     {
         type: "text",
-        subtitle: "Navigation",
-        description: "The original mobile navigation felt cluttered and inconsistent, mixing articles, blog posts, and products under unclear labels. I reduced the number of categories to four to create a more focused structure with fewer distractions. This helped users quickly understand where to go and made the browsing experience feel calmer and more intentional.",
+        subtitle: "Nawigacja",
+        description: "Oryginalna nawigacja mobilna była zagracona i niespójna, łącząc artykuły, wpisy na blogu i produkty pod niejasnymi etykietami. Zredukowałam liczbę kategorii do czterech, aby stworzyć bardziej skoncentrowaną strukturę z mniejszą liczbą rozpraszaczy. Pomogło to użytkownikom szybko zrozumieć, dokąd mają iść i sprawiło, że przeglądanie było spokojniejsze i bardziej przemyślane.",
     },
-
-
 
     {
         type: "media",
@@ -37,20 +32,16 @@ const projects = [
         size: "half",
     },
 
-
-        {
+    {
         type: "text",
-        subtitle: "Product showcase & pricing",
-        description: "I added lifestyle previews to show the product in action and encourage clicks. A clickable rating next to the title directs users to reviews faster. I clarified pricing by showing cost per sachet, and made the total order cost, any gift offers, and delivery details very prominent — reducing surprises and building trust.",
+        subtitle: "Prezentacja produktu i ceny",
+        description: "Dodałam podglądy lifestyle’owe, aby pokazać produkt w akcji i zachęcić do kliknięć. Klikalna ocena obok tytułu kieruje użytkowników szybciej do recenzji. Wyjaśniłam ceny, pokazując koszt za saszetkę, a całkowity koszt zamówienia, oferty prezentowe i szczegóły dostawy uczyniłam bardzo widocznymi — zmniejszając niespodzianki i budując zaufanie.",
     },
     {
         type: "text",
-        subtitle: "Information Hierarchy",
-        description: "The challenge was that Absolute Collagen’s site had a wealth of content, but it was overwhelming and hard to navigate. I restructured the product information based on a user card-sorting exercise, categorizing content where users expected to find it. I added bullet points for quick scanning and combined ingredient details with usage instructions, addressing a key need for clarity. I also created product highlights and infographics to showcase the supplement’s benefits and results, establishing a clear hierarchy and making the page both informative and visually digestible.",
+        subtitle: "Hierarchia informacji",
+        description: "Wyzwanie polegało na tym, że strona Absolute Collagen miała mnóstwo treści, ale była przytłaczająca i trudna w nawigacji. Przebudowałam informacje o produktach na podstawie ćwiczenia card-sorting z użytkownikami, kategoryzując treści tam, gdzie użytkownicy spodziewali się ich znaleźć. Dodałam punkty do szybkiego skanowania i połączyłam informacje o składnikach z instrukcjami użytkowania, odpowiadając na kluczową potrzebę przejrzystości. Stworzyłam też wyróżnienia produktów i infografiki, aby pokazać korzyści i efekty suplementu, ustalając wyraźną hierarchię i sprawiając, że strona była zarówno informacyjna, jak i wizualnie przyswajalna.",
     },
-
-
-
 
     {
         type: "media",
@@ -63,21 +54,19 @@ const projects = [
         size: "half",
     },
 
-
-        {
+    {
         type: "text",
-        subtitle: "Brand consistency",
-        description: "I noticed the brand had multiple visual directions across the site, so I streamlined it by choosing a single primary yellow, unifying buttons, icons, and typography, and designing flexible assets for infographics and social media. The goal was a clean, modern look with a luxurious feel, making the site consistent, engaging, and accessible for the audience.",
+        subtitle: "Spójność marki",
+        description: "Zauważyłam, że marka miała wiele różnych kierunków wizualnych na stronie, więc uprościłam ją, wybierając jeden główny żółty kolor, ujednolicając przyciski, ikony i typografię oraz projektując elastyczne materiały do infografik i mediów społecznościowych. Celem był czysty, nowoczesny wygląd z luksusowym charakterem, czyniący stronę spójną, angażującą i przystępną dla odbiorców.",
     },
     {
         type: "text",
-        subtitle: "Final outcome",
-        description: "Refining an existing, content-rich brand—improving clarity, consistency, and engagement—can be harder than starting from scratch, but it’s also incredibly rewarding. I approached it strategically. There was a huge amount of invisible work in this project, from UX standards alignment and competitor analysis to technical considerations.",
+        subtitle: "Efekt końcowy",
+        description: "Dopracowanie istniejącej, bogatej w treści marki — poprawa przejrzystości, spójności i zaangażowania — może być trudniejsze niż tworzenie wszystkiego od zera, ale jest również niezwykle satysfakcjonujące. Podeszłam do tego strategicznie. Projekt wymagał ogromu niewidocznej pracy, od dostosowania standardów UX i analizy konkurencji po kwestie techniczne.",
     },
-
 ];
 
-// Function to create and append tiles to the grid
+// Function to create and append tiles to the grid (nie zmieniamy, działa)
 function createTiles() {
     const gridContainer = document.getElementById("grid-container");
 
@@ -87,7 +76,6 @@ function createTiles() {
         if (project.size) gridItem.classList.add(project.size);
 
         if (project.type === "media") {
-            // IMAGE OR VIDEO
             const ext = project.image.split('.').pop().toLowerCase();
             let media;
 
@@ -110,11 +98,9 @@ function createTiles() {
             gridItem.appendChild(media);
 
         } else if (project.type === "text") {
-            // TEXT SECTION
             const textWrapper = document.createElement("div");
             textWrapper.classList.add("project-text-wrapper");
 
-            // Subtitle
             if (project.subtitle) {
                 const subtitle = document.createElement("h4");
                 subtitle.classList.add("project-subtitle");
@@ -122,7 +108,6 @@ function createTiles() {
                 textWrapper.appendChild(subtitle);
             }
 
-            // Description
             if (project.description) {
                 const descDiv = document.createElement("p");
                 descDiv.textContent = project.description;
@@ -137,5 +122,3 @@ function createTiles() {
 }
 
 document.addEventListener("DOMContentLoaded", createTiles);
-
-//CSS for this is in style.css and all should be under coment "AC styling section"
