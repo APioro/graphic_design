@@ -35,6 +35,46 @@
             po spójność interfejsu. Po odejściu jednej z osób z zespołu przejęłam również redesign menu.
         </p>
     </div>
+     <div class="project-description-graphic-design">
+        <div class="project-details">
+            <dl class="project-details__list">
+                <div class="project-details__row">
+                    <dt class="project-details__label">Zakres</dt>
+                    <dd class="project-details__value">
+                        Audyt heurystyczny i badania użytkowników <br>
+                        Redesign strony produktu <br>
+                        Redesign menu <br>
+                        Ujednolicenie UI względem brandingu
+                    </dd>
+                </div>
+
+                <div class="project-details__row">
+                    <dt class="project-details__label">Klient</dt>
+                    <dd class="project-details__value">
+                        Absolute Collagen <br>
+                        E-commerce z suplementami
+                    </dd>
+                </div>
+
+                <div class="project-details__row">
+                    <dt class="project-details__label">Cele biznesowe</dt>
+                    <dd class="project-details__value">
+                        Zwiększenie konwersji <br>
+                        Budowanie zaufania poprzez wyeksponowanie korzyści produktu <br>
+                        Spójność brandingu w UI
+                    </dd>
+                </div>
+
+                <div class="project-details__row">
+                    <dt class="project-details__label">Rok</dt>
+                    <dd class="project-details__value">2023</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
 </div>
 
 <!-- ===================== REZULTATY ===================== -->
@@ -140,7 +180,22 @@
         <div class="grid-item half">
             <img src="info-architecture-2.png" loading="lazy">
         </div>
+
+                <div class="grid-item large">
+            <div class="callout-yellow">
+            <p><b>Wnioski z procesu</b></p>
+            
+             <small>
+                      W badaniu card sorting próbowałam uprościć nazewnictwo, zastępując „Absolute Collagen” literą „X”. 
+            Wydawało się to sprytne i oszczędne. Nie było. 
+            Opisy stały się mniej zrozumiałe, część uczestników zrezygnowała, a zadanie straciło klarowność. 
+            Wniosek: klarowność zawsze wygrywa z „inteligentnym” skrótem. 
+            Ostatecznie powtórzyłam badanie.   </small>
+        </div>
+         </div>
     </div>
+
+    <div class="divider"></div>
 
     <div class="grid-container">
         <div class="grid-item half">
@@ -165,27 +220,58 @@
 
 <section id="graphic-design-white">
     <div class="grid-container">
-        <div class="grid-item half">
-            <h3>2. Prototypowanie (dodawanie do koszyka)</h3>
-            <p>
-                Największym wyzwaniem był model zakupu jednorazowego i subskrypcyjnego.
-            </p>
-            <ul>
-                <li>Zakup jednorazowy + 2 modele subskrypcji</li>
-                <li>Różne ceny i liczby opakowań</li>
-                <li>Konieczność szybkiego zrozumienia różnic</li>
-            </ul>
-        </div>
+<div class="grid-item half">
+    <h3>2. Prototypowanie (dodawanie do koszyka)</h3>
+           
+    <div class="text-left-sided">
+        <p>
+            Nawigacja oraz strona produktu były stosunkowo proste do zaprototypowania. 
+            Gdy zrozumiałam, jakiej struktury informacji oczekują użytkownicy, implementacja stała się prosta.
+        </p>
 
+        <p>
+            Z tego powodu etap prototypowania skupiłam głównie na procesie dodawania do koszyka z opcją subskrypcji, 
+            który okazał się najbardziej złożoną (i najciekawszą) częścią projektu.
+        </p>
+
+        <br><br>
+
+        <h4>2.1 Wymaganie: model zakupu i subskrypcji</h4>
+              
+        <p class="short">
+            Logika biznesowa była złożona, 
+            ale interfejs musiał być dla użytkownika intuicyjny.
+        </p>
+
+        <ul>
+            <li>Zakup jednorazowy + dwie opcje subskrypcji (co 2 tygodnie / co 4 tygodnie)</li>
+            <li>Każda opcja miała inną cenę i liczbę opakowań</li>
+            <li>Wyzwanie polegało na tym, by różnice były czytelne na pierwszy rzut oka</li>
+            <li>Istniało niewiele dobrych przykładów rynkowych, więc rozwiązanie musiało zostać zaprojektowane od podstaw</li>
+        </ul>
+    </div>
+</div>
         <div class="grid-item half">
+             <h4> 2.2 Próbowałam wielu opcji </h4>
             <img src="add-to-card.jpg">
         </div>
 
+              <div class="grid-item large">
+<div class="divider"></div>
+</div>
         <div class="grid-item half">
+             <h4> 2.3 Odkryłam ciekawe rozwiązanie, ale..</h4>
+           <p>nie na tę okazję - design nie pokrywa się z modelem biznesowym.<br>
+           Mam nadzieję wykorzystać je kiedyś w przyszłych projektach.</p>
             <img src="itteration-add-to-cart.jpg">
         </div>
 
         <div class="grid-item half">
+            <h4>2.4 Finalny projekt</h4>
+<p>
+    Ostateczne rozwiązanie nie jest idealne, ale działa. 
+    Nadal nie uważam go za rozwiązanie doskonałe, jednak w ramach realnych ograniczeń sprawdza się dobrze.
+</p>
             <img src="final.jpg">
         </div>
     </div>
@@ -232,11 +318,18 @@
                 Ze względu na ograniczenia czasowe nie przeprowadziłam pełnych testów końcowych.
             </p>
             <ul>
-                <li>Testy zadaniowe (one-time vs subskrypcja)</li>
-                <li>Analiza misclick / rage-click</li>
-                <li>Testy wydajności mobilnej</li>
+                <li><p><b>Testy zadaniowe</b> - szczególnie dodawania do koszyka subskrybcji</p></li>
+                <li><p><b>Analiza misclick / rage-click</b> (Google Analytics/Hotjar), by wyłapać inne friction points</p></li>
+                <li><p><b>Testy wydajności mobilnej</b> - ilość kontentu vs szybkość ładowania</p></li>
             </ul>
         </div>
+         <div class="grid-item half">
+          <div class="callout-yellow">
+            <p><b>Wnioski</b></p>
+            <p>
+               Następnym razem zostawię znacznie więcej czasu an końcowe testy. 
+            </p>
+          </div>
     </div>
 </section>
 
